@@ -20,7 +20,7 @@ export default function MovieSelected({ selectedId, onCloseSelectedMovie }) {
     function () {
       async function getMovieData() {
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+          `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
         );
         const data = await res.json();
         setMovieDetail(data);
